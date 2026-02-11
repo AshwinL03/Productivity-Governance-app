@@ -1,0 +1,42 @@
+.home-dashboard {
+  width: 100%;
+}
+
+.home-header h2 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.home-header p {
+  margin: 4px 0 20px;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.kpi-row {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.log-hours-btn {
+  background: #7c3aed;
+  color: #fff;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.log-hours-btn:hover {
+  background: #6d28d9;
+}
+
+
+.home-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

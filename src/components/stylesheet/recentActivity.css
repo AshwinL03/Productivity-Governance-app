@@ -1,0 +1,29 @@
+.activity-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-top: 1px solid #f3f4f6;
+}
+
+.activity-item:first-of-type {
+  border-top: none;
+}
+
+.activity-title {
+  margin: 0;
+  font-size: 14px;
+}
+
+.activity-time {
+  margin: 2px 0 0;
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.activity-hours {
+  font-size: 13px;
+  color: #7c3aed;
+  background: #f5f3ff;
+  padding: 4px 10px;
+  border-radius: 999px;
+}
