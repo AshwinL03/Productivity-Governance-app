@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
-import Sidebar from "./memberSidebar";
-
+import Sidebar from "./MemberSidebar";
+ 
 function MainLayout() {
   return (
     <div style={{ display: "flex", minHeight: "100vh" }}>
@@ -11,5 +11,5 @@ function MainLayout() {
     </div>
   );
 }
-
+ 
 export default MainLayout;
