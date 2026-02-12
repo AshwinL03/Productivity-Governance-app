@@ -29,6 +29,7 @@ function AssignedProjectsCard({ projects, setProjects }) {
 
   return (
     <div className="card-section">
+
       <h4>Assigned Projects</h4>
       <p className="section-subtext">
         Use the sliders to record your hours (0–8 hrs)
@@ -36,42 +37,63 @@ function AssignedProjectsCard({ projects, setProjects }) {
 
       {projects.map((project) => {
         const percentage = (project.hours / 8) * 100;
+        const isPending = project.status === "pending";
 
         return (
-          <div key={project.id} className="project-row">
+          <div
+            key={project.id}
+            className="project-row"
+            style={{
+              opacity: isPending ? 0.6 : 1,
+            }}
+
+          >
 
             <div className="project-label">
               {project.name}
+              {isPending && (
+                <span className="pending-badge">
+                  Pending Approval
+                </span>
+              )}
             </div>
 
-            <div className="slider-wrapper">
-              <input
-                type="range"
-                min="0"
-                max="8"
-                value={project.hours}
-                onChange={(e) =>
-                  handleSliderChange(project.id, e.target.value)
-                }
-                className="custom-slider"
-                style={{
-                  background: `linear-gradient(to right, #7c3aed ${percentage}%, #e5e7eb ${percentage}%)`
-                }}
-              />
-            </div>
+            {isPending ? (
+              <div className="pending-message" >
+                Awaiting admin approval before logging hours.
+              </div>
+            ) : (
+              <>
+                <div className="slider-wrapper">
+                  <input
+                    type="range"
+                    min="0"
+                    max="8"
+                    value={project.hours}
+                    onChange={(e) =>
+                      handleSliderChange(project.id, e.target.value)
+                    }
+                    className="custom-slider"
+                    style={{
+                      background: `linear-gradient(to right, #7c3aed ${percentage}%, #e5e7eb ${percentage}%)`
+                    }}
+                  />
+                </div>
 
-            <div className="hours-input">
-              <input
-                type="number"
-                min="0"
-                max="8"
-                value={project.hours}
-                onChange={(e) =>
-                  handleInputChange(project.id, e.target.value)
-                }
-              />
-              <span>hrs</span>
-            </div>
+                <div className="hours-input">
+                  <input
+                    type="number"
+                    min="0"
+                    max="8"
+                    value={project.hours}
+                    onChange={(e) =>
+                      handleInputChange(project.id, e.target.value)
+                    }
+                  />
+                  <span>hrs</span>
+                </div>
+              </>
+            )}
 
           </div>
         );

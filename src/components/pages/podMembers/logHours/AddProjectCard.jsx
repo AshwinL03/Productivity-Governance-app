@@ -1,11 +1,20 @@
 import { X, CalendarDays } from "lucide-react";
+import { useState } from "react";
 import "../../../stylesheet/logHours.css";
 
-function AddProjectCard({ onClose }) {
+function AddProjectCard({ onClose, onAddProject }) {
+
+  const [selectedProject, setSelectedProject] = useState("");
+
+  const handleAdd = () => {
+    if (!selectedProject) return;
+
+    onAddProject(selectedProject);
+  };
+
   return (
     <div className="add-project-card">
-      
-      {/* Header */}
+
       <div className="add-project-header">
         <h3>Assign Project to My Timeline</h3>
         <button className="close-btn" onClick={onClose}>
@@ -13,13 +22,16 @@ function AddProjectCard({ onClose }) {
         </button>
       </div>
 
-      {/* Form Fields */}
       <div className="form-group">
         <label>Project</label>
-        <select>
-          <option>Select project</option>
-          <option>Project 1</option>
-          <option>Project 2</option>
+        <select
+          value={selectedProject}
+          onChange={(e) => setSelectedProject(e.target.value)}
+        >
+          <option value="">Select project</option>
+          <option value="Project Alpha">Project Alpha</option>
+          <option value="Project Beta">Project Beta</option>
+          <option value="Project Gamma">Project Gamma</option>
         </select>
       </div>
 
@@ -45,9 +57,10 @@ function AddProjectCard({ onClose }) {
         This project will appear in your Log Hours during the selected period.
       </p>
 
-      {/* Actions */}
       <div className="form-actions">
-        <button className="primary-btn">Add to Timeline</button>
+        <button className="primary-btn" onClick={handleAdd}>
+          Add to Timeline
+        </button>
         <button className="secondary-btn" onClick={onClose}>
           Cancel
         </button>
