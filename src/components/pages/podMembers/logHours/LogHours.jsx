@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { Plus } from "lucide-react";
-import TabSwitch from "../logHours/TabSwitch";
-import AddProjectCard from "../logHours/AddProjectCard";
-import AssignedProjectsCard from "../logHours/AssignedProjectsCard";
-import NonProjectCard from "../logHours/NonProjectCard";
-import TotalHoursCard from "../logHours/TotalHoursCard";
-import "../../stylesheet/logHours.css";
+import TabSwitch from "./TabSwitch";
+import AddProjectCard from "./AddProjectCard";
+import AssignedProjectsCard from "./AssignedProjectsCard";
+import NonProjectCard from "./NonProjectCard";
+import TotalHoursCard from "./TotalHoursCard";
+import "../../../stylesheet/logHours.css";
 
 function LogHours() {
   const [activeTab, setActiveTab] = useState("today");

@@ -1,4 +1,4 @@
-import "../../stylesheet/logHours.css";
+import "../../../stylesheet/logHours.css";
 
 function TabSwitch({ activeTab, setActiveTab }) {
   return (

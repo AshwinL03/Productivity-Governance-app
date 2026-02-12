@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import KpiCard from "./KpiCard";
 import OverviewCard from "./OverviewCard";
 import RecentActivity from "./RecentActivity";
-import "../../stylesheet/home.css";
+import "../../../stylesheet/home.css";
 
 function Home() {
   const navigate = useNavigate();

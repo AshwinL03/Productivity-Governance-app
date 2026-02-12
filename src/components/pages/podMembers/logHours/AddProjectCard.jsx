@@ -1,5 +1,5 @@
 import { X, CalendarDays } from "lucide-react";
-import "../../stylesheet/logHours.css";
+import "../../../stylesheet/logHours.css";
 
 function AddProjectCard({ onClose }) {
   return (

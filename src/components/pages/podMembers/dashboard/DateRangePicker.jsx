@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import "../../stylesheet/datePicker.css";
+import "../../../stylesheet/datePicker.css";
 
 function DateRangePicker({ onClose, onApply }) {
   const [selectedDay, setSelectedDay] = useState(1);

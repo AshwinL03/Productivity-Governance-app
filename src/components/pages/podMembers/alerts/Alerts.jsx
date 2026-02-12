@@ -1,4 +1,4 @@
-import "../../stylesheet/alert.css";
+import "../../../stylesheet/alert.css";
 
 function Alerts() {
   return (

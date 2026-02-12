@@ -1,10 +1,10 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Login from "./components/pages/login/Login";
-import Home from "./components/pages/dashboard/Home";
-import LogHours from "./components/pages/logHours/LogHours";
+import Home from "./components/pages/podMembers/dashboard/Home";
+import LogHours from "./components/pages/podMembers/logHours/LogHours";
 import MainLayout from "./components/layout/MainLayout";
-import Alerts from "./components/pages/alerts/Alerts";
+import Alerts from "./components/pages/podMembers/alerts/Alerts";
 
 function App() {
   return (

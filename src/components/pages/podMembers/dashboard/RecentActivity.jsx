@@ -1,5 +1,5 @@
 import ActivityItem from "./ActivityItem";
-import "../../stylesheet/recentActivity.css";
+import "../../../stylesheet/recentActivity.css";
 
 function RecentActivity() {
   return (

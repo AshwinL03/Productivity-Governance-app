@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import "../../stylesheet/logHours.css";
+import "../../../stylesheet/logHours.css";
 
 function NonProjectCard({ setNonProjectTotal }) {
 

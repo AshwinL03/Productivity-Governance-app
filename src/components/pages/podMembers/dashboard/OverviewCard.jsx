@@ -3,7 +3,7 @@ import ProgressRow from "./ProgressRow";
 import DateRangePicker from "./DateRangePicker";
 import { CalendarDays } from "lucide-react";
 
-import "../../stylesheet/overview.css";
+import "../../../stylesheet/overview.css";
 
 function OverviewCard() {
   const [showPicker, setShowPicker] = useState(false);

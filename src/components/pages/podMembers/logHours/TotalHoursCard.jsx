@@ -1,5 +1,5 @@
 import { AlertCircle, Check } from "lucide-react";
-import "../../stylesheet/logHours.css";
+import "../../../stylesheet/logHours.css";
 
 function TotalHoursCard({ totalHours, activeTab }) {
   const isWeek = activeTab === "week";
