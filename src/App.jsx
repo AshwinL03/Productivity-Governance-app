@@ -5,6 +5,8 @@ import Home from "./components/pages/podMembers/dashboard/Home";
 import LogHours from "./components/pages/podMembers/logHours/LogHours";
 import MainLayout from "./components/layout/MainLayout";
 import Alerts from "./components/pages/podMembers/alerts/Alerts";
+import Profile from "./components/pages/podMembers/profile/Profile"
+
 
 function App() {
   return (
@@ -19,6 +21,7 @@ function App() {
           <Route index element={<Home />} />
           <Route path="log-hours" element={<LogHours />} />
           <Route path="alerts" element={<Alerts />} />
+          <Route path= "profile" element={<Profile/>} />
         </Route>
 
         {/* Temporary Routes for Lead & Admin */}
