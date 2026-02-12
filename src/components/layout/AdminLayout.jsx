@@ -1,10 +1,10 @@
 import { Outlet } from "react-router-dom";
-import Sidebar from "./memberSidebar";
+import AdminSidebar from "./adminSidebar"; 
 
-function MainLayout() {
+function AdminLayout() {
   return (
     <div style={{ display: "flex", minHeight: "100vh" }}>
-      <Sidebar />
+      <AdminSidebar />
       <div style={{ flex: 1, padding: "16px" }}>
         <Outlet />
       </div>
@@ -12,4 +12,4 @@ function MainLayout() {
   );
 }
 
-export default MainLayout;
+export default AdminLayout;
