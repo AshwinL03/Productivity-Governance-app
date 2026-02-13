@@ -1,6 +1,6 @@
-import SecuritySection from "../settings/SecuritySection";
-import NotificationsSection from "../settings/NotificationsSection";
-import HelpSupportSection from "../settings/HelpSupportSection";
+import SecuritySection from "./SecuritySection";
+import NotificationsSection from "./NotificationsSection";
+import HelpSupportSection from "./HelpSupportSection";
 import "../../../stylesheet/settings.css";
 
 function Settings() {

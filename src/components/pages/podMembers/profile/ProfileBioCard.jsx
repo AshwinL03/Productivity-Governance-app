@@ -3,25 +3,28 @@ import { Mail, Briefcase } from "lucide-react"
 import "../../../stylesheet/Profile.css";
  
  
+export const getInitials = (name) => {
+    if (!name) return "";
+    const words = name.trim().split(/\s+/);
+    if (words.length === 0) return "";
+    if (words.length === 1) return words[0][0].toUpperCase();
+    return (words[0][0] + words[words.length - 1][0]).toUpperCase();
+};
+ 
+ 
+export const formatExperience = (ms) => {
+    const seconds = Math.floor(ms / 1000);
+    const minutes = Math.floor(seconds / 60);
+    const hours = Math.floor(minutes / 60);
+    const days = Math.floor(hours / 24);
+    const years = Math.floor(days / 365);
+    const months = Math.floor((days % 365) / 30);
+ 
+    return `${years} years ${months} months experience`;
+};
+ 
+ 
 const ProfileBioCard = ({ profileData, isEditing, setProfileData }) => {
-    const formatExperience = (ms) => {
-        const seconds = Math.floor(ms / 1000);
-        const minutes = Math.floor(seconds / 60);
-        const hours = Math.floor(minutes / 60);
-        const days = Math.floor(hours / 24);
-        const years = Math.floor(days / 365);
-        const months = Math.floor((days % 365) / 30);
- 
-        return `${years} years ${months} months experience`;
-    };
- 
-    const getInitials = (name) => {
-        if (!name) return "";
-        const words = name.trim().split(/\s+/);
-        if (words.length === 0) return "";
-        if (words.length === 1) return words[0][0].toUpperCase();
-        return (words[0][0] + words[words.length - 1][0]).toUpperCase();
-    };
  
     const handleChange = (e) => {
         const { name, value } = e.target;
