@@ -8,6 +8,10 @@ import Alerts from "./components/pages/podMembers/alerts/Alerts";
 import Profile from "./components/pages/podMembers/profile/Profile"
 
 
+//Admin
+import AdminLayout from "./components/layout/AdminLayout";
+import AdminHome from "./components/pages/admin/adminDashboard/adminHome";
+
 function App() {
   return (
     <BrowserRouter>
@@ -26,7 +30,13 @@ function App() {
 
         {/* Temporary Routes for Lead & Admin */}
         <Route path="/lead" element={<div>Lead Page (Coming Soon)</div>} />
-        <Route path="/admin" element={<div>Admin Page (TBD)</div>} />
+
+        <Route path="/admin" element={<AdminLayout />}>
+          <Route index element={<AdminHome />} />
+          <Route path="projects" element={<div>Admin Projects (Coming Soon)</div>} />
+          <Route path="members" element={<div>Admin Members (Coming Soon)</div>} />
+          <Route path="alerts" element={<div>Admin Alerts (Coming Soon)</div>} />
+        </Route>
 
       </Routes>
     </BrowserRouter>

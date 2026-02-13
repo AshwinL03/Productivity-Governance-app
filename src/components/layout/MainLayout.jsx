@@ -1,6 +1,6 @@
-import { Outlet, useLocation } from "react-router-dom";
-import Sidebar from "./Sidebar";
- 
+import { Outlet } from "react-router-dom";
+import Sidebar from "./memberSidebar";
+
 function MainLayout() {
   const location = useLocation();
   const isProfile = location.pathname.split('/').includes('profile');
