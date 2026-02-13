@@ -147,14 +147,14 @@
   }
 }
 
-.add-project-header {
+.add-pro-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 16px;
 }
 
-.add-project-header h3 {
+.add-pro-header h3 {
   font-size: 16px;
   font-weight: 600;
 }

@@ -10,7 +10,7 @@ function Alerts() {
           <h1>Alerts & Signals</h1>
           <p>Stay updated with important notifications</p>
         </div>
-        <button className="clear-btn">Clear All</button>
+        <button className="clear-all-btn">Clear All</button>
       </div>
 
       {/* SUMMARY */}

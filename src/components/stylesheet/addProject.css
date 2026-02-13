@@ -1,0 +1,686 @@
+/* addProject.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.add-project-page {
+  padding: 10px 22px;
+  max-width: 1280px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+
+/* ================= HEADER ================= */
+
+.add-project-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-bottom: 20px;        /* spacing before line */
+  margin-bottom: 28px;         /* space before cards */
+  border-bottom: 1px solid #e5e7eb;   /* 👈 THE UNDERLINE */
+}
+
+
+.add-project-header h1 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.add-project-header .sub-heading {
+  margin-top: 6px;
+  font-size: 14px;
+  color: #64748b;
+  font-weight: 400;
+}
+
+/* Layout - Two column with border radius on BOTH cards */
+.add-project-layout {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 32px;
+  align-items: start;
+
+  margin-top: 60px;   /* 👈 ADD THIS */
+}
+
+
+/* LEFT CARD - Border radius on both sides */
+.add-project-main {
+  background: white;
+  border: 1px solid #edf2f7;
+  border-radius: 24px; /* Border radius on both sides */
+  padding: 28px 32px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+}
+
+/* RIGHT CARD - Border radius on both sides */
+.suggested-panel {
+  background: white;
+  border: 1px solid #edf2f7;
+  border-radius: 24px; /* Border radius on both sides */
+  padding: 28px 28px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+}
+
+/* Project Sections */
+.project-section {
+  margin-bottom: 28px;
+}
+
+.project-section h2 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #0f1820;
+  margin: 0 0 24px 0;
+  letter-spacing: -0.01em;
+}
+
+/* Field Labels - WITH RED ASTERISK */
+.field-label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.field-label strong {
+  font-size: 15px;
+  font-weight: 600;
+  color: #0f1820;
+}
+
+.asterisk {
+  color: #e53e3e; /* Red color */
+  font-size: 15px;
+  font-weight: 600;
+  margin-left: 4px;
+}
+
+/* ================= INPUT STYLE ================= */
+
+.input-wrapper {
+  width: 100%;
+  margin-bottom: 22px;
+}
+
+.input-wrapper input {
+  width: 100%;
+  height: 52px;                     /* 👈 Taller */
+  padding: 0 18px;                  /* 👈 More spacing */
+  border: 1.5px solid #e2e8f0;      /* 👈 Soft border */
+  border-radius: 12px;              /* 👈 Rounded */
+  background: #f8fafc;              /* 👈 Light gray bg */
+  font-size: 14px;
+  color: #0f172a;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+/* Placeholder */
+.input-wrapper input::placeholder {
+  color: #94a3b8;
+  font-weight: 400;
+}
+
+/* Hover */
+.input-wrapper input:hover {
+  border-color: #cbd5e1;
+}
+
+/* Focus */
+.input-wrapper input:focus {
+  outline: none;
+  border-color: #8a5cf5;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(138, 92, 245, 0.08);
+}
+
+/* Date Field - Special styling */
+.date-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 18px;
+  border: 1.5px solid #e6edf0;
+  border-radius: 8px;
+  background: #ffffff;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  width: 100%;
+}
+
+.date-wrapper:hover {
+  border-color: #cbd5e1;
+}
+
+.date-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.date-left span {
+  font-size: 15px;
+  color: #94a3b8;
+  font-weight: 450;
+}
+
+.date-placeholder {
+color: #e2e8f0;
+font-weight: 200;
+}
+
+
+.chevron-icon {
+  stroke: #8a5cf5 !important;
+  width: 18px;
+  height: 18px;
+}
+
+/* Section Heading with Icon */
+.section-heading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #0f1820;
+  margin-bottom: 24px;
+}
+
+.section-icon {
+  color: #8a5cf5;
+}
+
+
+/* Timeline Grid */
+.timeline-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 4px;
+}
+
+.timeline-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.timeline-label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.timeline-label strong {
+  font-size: 15px;
+  font-weight: 600;
+  color: #0f1820;
+}
+
+/* ================= MODERN DATE PICKER ================= */
+
+.date-picker-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.calendar-card {
+  width: 380px;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 28px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  animation: fadeIn 0.2s ease;
+}
+
+.date-picker-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.date-picker-header h3 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.date-picker-header button {
+  background: #f1f5f9;
+  border: none;
+  border-radius: 8px;
+  padding: 6px;
+  cursor: pointer;
+}
+
+.date-picker-header button:hover {
+  background: #e2e8f0;
+}
+
+.date-picker-month {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+
+.weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+  font-size: 13px;
+  color: #64748b;
+  margin-bottom: 12px;
+}
+
+.days-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.day {
+  height: 38px;
+  width: 38px;
+  border-radius: 10px;
+  border: none;
+  background: transparent;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.day:hover {
+  background: #f1f5f9;
+}
+
+.day.selected {
+  background: #0f172a;
+  color: #ffffff;
+}
+
+/* ================= CALENDAR FOOTER ================= */
+
+.date-picker-footer {
+  display: flex;
+  gap: 12px;
+}
+
+.today-btn {
+  flex: 1;
+  background: linear-gradient(135deg, #9333ea, #7c3aed);
+  color: #ffffff;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.clear-btn {
+  flex: 1;
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+
+/* ================= ACTION BUTTONS ================= */
+
+.add-project-actions {
+  display: flex;
+  justify-content: flex-end; /* Align right */
+  align-items: center;
+  gap: 16px; /* Space between buttons */
+  margin-top: 28px;
+  padding-top: 16px;
+}
+
+/* Cancel Button */
+.cancel-btn {
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  padding: 10px 22px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #334155;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  transition: all 0.2s ease;
+}
+
+.cancel-btn:hover {
+  background: #e2e8f0;
+}
+
+/* Create Project Button */
+.create-btn {
+  background: linear-gradient(135deg, #8a5cf5, #7c3aed);
+  border: none;
+  padding: 10px 22px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  transition: all 0.2s ease;
+}
+
+.create-btn:hover {
+  background: linear-gradient(135deg, #7c3aed, #6d28d9);
+}
+
+/* Right Panel - Suggested Members */
+.suggested-panel h2 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #0f1820;
+  margin: 0 0 16px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.suggested-description {
+  font-size: 15px;
+  color: #5e6f7d;
+  margin-bottom: 32px;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+/* Quick Tips */
+.quick-tips {
+  margin-top: 24px;
+}
+
+.quick-tips h4 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #0f1820;
+  margin: 0 0 20px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.quick-tips ul {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.quick-tips li {
+  font-size: 14px;
+  color: #5e6f7d;
+  margin-bottom: 16px;
+  line-height: 1.6;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-weight: 400;
+}
+
+.quick-tips li .lucide-icon {
+  stroke: #8a5cf5 !important;
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* Divider */
+.section-divider {
+  margin: 28px 0;
+  border: 0;
+  border-top: 1px solid #edf2f7;
+}
+
+/* Position relative for date picker */
+.date-picker-container {
+  position: relative;
+  width: 100%;
+}
+
+/* Remove icons from inputs */
+.input-wrapper .lucide-icon {
+  display: none; /* Icons removed as requested */
+}
+
+
+/* ================= MEMBER ASSIGNMENT ================= */
+
+.member-input-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+/* INPUT */
+.member-input-wrapper input {
+  width: 100%;
+  height: 52px;
+  padding: 0 16px 0 40px;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 12px;
+  background: #f8fafc;
+  font-size: 14px;
+  color: #0f172a;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+/* Placeholder */
+.member-input-wrapper input::placeholder {
+  color: #94a3b8;
+  font-weight: 400;
+}
+
+/* Hover */
+.member-input-wrapper input:hover {
+  border-color: #cbd5e1;
+}
+
+/* Focus */
+.member-input-wrapper input:focus {
+  outline: none;
+  border-color: #8a5cf5;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(138, 92, 245, 0.08);
+}
+
+
+.search-icon {
+  position: absolute;
+  top: 50%;
+  left: 14px;
+  transform: translateY(-50%);
+  color: #94a3b8;
+}
+
+/* Dropdown */
+.member-dropdown {
+  margin-top: 8px;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  background: white;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+  overflow: hidden;
+}
+
+.member-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.member-item:hover {
+ border-color: #cbd5e1;
+}
+
+.member-item button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #64748b;
+}
+
+.member-item button:hover {
+  color: #8a5cf5;
+}
+
+/* Selected Chips */
+.selected-members {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.member-chip {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  background: #ede9fe;
+  color: #6d28d9;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.member-chip svg {
+  cursor: pointer;
+}
+
+/* ================= SKILL REQUIREMENTS ================= */
+
+.skill-input-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.skill-input-wrapper input {
+  width: 100%;
+  height: 52px;
+  padding: 0 16px 0 40px;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 12px;
+  background: #f8fafc;
+  font-size: 14px;
+  color: #0f172a;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+/* Placeholder */
+.skill-input-wrapper input::placeholder {
+  color: #94a3b8;
+  font-weight: 400;
+}
+
+/* Hover */
+.skill-input-wrapper input:hover {
+  border-color: #cbd5e1;
+}
+
+/* Focus */
+.skill-input-wrapper input:focus {
+  outline: none;
+  border-color: #8a5cf5;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(138, 92, 245, 0.08);
+}
+
+.skill-dropdown {
+  margin-top: 8px;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  background: white;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+  overflow: hidden;
+}
+
+.skill-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.skill-item:hover {
+  background: #f8fafc;
+}
+
+.skill-item button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #64748b;
+}
+
+.skill-item button:hover {
+  color: #8a5cf5;
+}
+
+/* Selected Chips */
+.selected-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.skill-chip {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  background: #ede9fe;
+  color: #6d28d9;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.skill-chip svg {
+  cursor: pointer;
+}
+
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .add-project-layout {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  
+  .add-project-page {
+    padding: 20px;
+  }
+}
+

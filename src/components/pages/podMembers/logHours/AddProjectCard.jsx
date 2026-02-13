@@ -15,7 +15,7 @@ function AddProjectCard({ onClose, onAddProject }) {
   return (
     <div className="add-project-card">
 
-      <div className="add-project-header">
+      <div className="add-pro-header">
         <h3>Assign Project to My Timeline</h3>
         <button className="close-btn" onClick={onClose}>
           <X size={16} />
