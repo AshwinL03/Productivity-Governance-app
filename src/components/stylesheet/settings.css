@@ -1,0 +1,198 @@
+/* ================= SETTINGS PAGE ================= */
+
+.settings-page {
+   padding: 10px 22px;;
+}
+
+.settings-header h2 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.settings-header p {
+  margin-top: 4px;
+  font-size: 13px;
+  color: #6b7280;
+  margin-bottom: 24px;
+}
+
+/* ================= COMMON TEXT ================= */
+
+.section-subtext {
+  font-size: 13px;
+  padding-top: 6px;
+  color: #6b7280;
+  margin-bottom: 16px;
+}
+
+.section-title {
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.section-description {
+  font-size: 12px;
+  color: #6b7280;
+  margin-top: 4px;
+  padding-top: 5px;
+}
+
+.section-footnote {
+  font-size: 12px;
+  color: #6b7280;
+  margin-top: 14px;
+}
+
+/* ================= CARD ================= */
+
+.card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 22px;
+  margin-bottom: 24px;
+}
+
+/* ================= SECURITY ================= */
+
+.security-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-top: 16px;
+  padding: 18px 20px;
+
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+
+  transition: "background" 0.2s ease;
+}
+
+.security-row:hover {
+  background: #f3f4f6;
+}
+
+/* Primary Button */
+.primary-btn {
+  background: linear-gradient(90deg, #7c3aed, #9333ea);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.primary-btn:hover {
+  opacity: 0.9;
+}
+
+/* ================= NOTIFICATIONS ================= */
+
+.notification-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 16px 18px;
+  margin-top: 12px;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  background: #f9fafb;
+
+  transition: "background" 0.2s ease;
+}
+
+.notification-item:hover {
+  background: #f3f4f6;
+}
+
+.notification-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.notification-icon {
+  width: 32px;
+  height: 32px;
+  background: #f5f3ff;
+  color: #7c3aed;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 8px;
+}
+
+/* Enabled Badge */
+
+.status-badge.enabled {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  background: #dcfce7;
+  color: #15803d;
+
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.badge-icon {
+  color: #16a34a;
+}
+
+/* ================= HELP & SUPPORT ================= */
+
+.help-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 16px 18px;
+  margin-top: 12px;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  background: #f9fafb;
+
+  transition: "background" 0.2s ease;
+}
+
+.help-item:hover {
+  background: #f3f4f6;
+}
+
+.help-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.help-icon {
+  width: 32px;
+  height: 32px;
+  background: #f5f3ff;
+  color: #7c3aed;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 8px;
+}
+
+.help-external {
+  color: #9ca3af;
+}

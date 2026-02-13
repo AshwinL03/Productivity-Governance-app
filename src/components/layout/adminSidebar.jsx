@@ -1,6 +1,6 @@
 import { LayoutDashboard, FolderKanban, Users, Bell } from "lucide-react";
 import { useNavigate, useLocation } from "react-router-dom";
-import SidebarItem from "../../components/layout/SidebarItem";
+import SidebarItem from "./SidebarItem";
 import "../stylesheet/sidebar.css"; 
 
 function AdminSidebar() {
