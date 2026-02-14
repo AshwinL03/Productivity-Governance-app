@@ -21,6 +21,7 @@ import LeadLayout from "./components/layout/LeadLayout";
 ========================= */
 import AdminLayout from "./components/layout/AdminLayout";
 import AdminHome from "./components/pages/admin/adminDashboard/adminHome";
+import Overview from "./components/pages/podLeads/LeadOverview/Overview";
 import ProjectLeadActualHours from "./components/pages/podLeads/actualHoursLead/ProjectLeadActualHours";
 import EachProject from "./components/pages/podLeads/project/EachProject";
 import AddProject from "./components/pages/podLeads/addProject/AddProject";
@@ -54,7 +55,7 @@ function App() {
           {/* ================= LEAD ================= */}
           <Route path="/lead" element={<LeadLayout />}>
             {/* /lead */}
-            <Route index element={<div>Lead Overview</div>} />
+            <Route index element={<Overview />} />
             <Route path="actual-hours" element={<ProjectLeadActualHours />} />
             <Route path="alerts" element={<div>Lead Alerts (coming soon)</div>} />
             <Route path="project/:id" element={<EachProject />} />
