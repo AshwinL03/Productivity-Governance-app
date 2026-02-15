@@ -1,18 +1,20 @@
 import { Eye } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import "../../../stylesheet/podActualHours.css";
+
 const TeamTable = ({ members, searchQuery }) => {
     const navigate = useNavigate();
+
     // Filter by name and role
     const filteredMembers = members.filter(member =>
         member.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
         member.role.toLowerCase().includes(searchQuery.toLowerCase())
     );
- 
+
     if (!filteredMembers.length) {
         return <div className="no-data">No members found</div>;
     }
- 
+
     return (
         <div className="projectrows_table-container">
             <table className="projectrows_table">
@@ -29,7 +31,9 @@ const TeamTable = ({ members, searchQuery }) => {
                 </thead>
                 <tbody>
                     {filteredMembers.map((member, idx) => (
-                        <tr key={idx} onClick={() => navigate(`/lead/member/${member.name}`)}>
+                        <tr key={idx} onClick={() => navigate(`/lead/member/${encodeURIComponent(member.name)}`, { state: { member } })}>
+
+                            
                             {/* Member Name */}
                             <td>
                                 <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
@@ -39,10 +43,10 @@ const TeamTable = ({ members, searchQuery }) => {
                                     <span style={{ fontWeight: "600", fontSize: "14px" }}>{member.name}</span>
                                 </div>
                             </td>
- 
+
                             {/* Role */}
                             <td style={{ color: "#6b7280" }}>{member.role}</td>
- 
+
                             {/* Projects Count */}
                             <td style={{ textAlign: "center" }}>
                                 <span style={{
@@ -56,11 +60,11 @@ const TeamTable = ({ members, searchQuery }) => {
                                     {member.projectinvolvedcount}
                                 </span>
                             </td>
- 
+
                             <td style={{ textAlign: "center", fontWeight: "600" }}>
                                 {member.actualhoursworked}h
                             </td>
- 
+
                             <td>
                                 <div style={{ display: "flex", flexDirection: "column", gap: "4px" }}>
                                     <div style={{ display: "flex", justifyContent: "space-between", fontSize: "12px", fontWeight: "600" }}>
@@ -96,29 +100,30 @@ const TeamTable = ({ members, searchQuery }) => {
                                     </div>
                                 </div>
                             </td>
- 
+
                             <td style={{ textAlign: "center" }}>
                                 <span style={{
                                     padding: "4px 10px",
                                     borderRadius: "12px",
                                     fontSize: "11px",
                                     fontWeight: "600",
-                                    background: member.availability === "Available" ? "#dcfce7" : member.availability === "Unavailable" ? "#fee2e2" : "#fef9c3", // light yellow for partial
-                                    color: member.availability === "Available" ? "#16a34a" : member.availability === "Unavailable" ? "#dc2626" : "#ca8a04" // darker yellow
+                                    background: member.availability === "Available" ? "#dcfce7" : member.availability === "Unavailable" ? "#fee2e2" : "#fef9c3",
+                                    color: member.availability === "Available" ? "#16a34a" : member.availability === "Unavailable" ? "#dc2626" : "#ca8a04"
                                 }}>
                                     {member.availability}
                                 </span>
                             </td>
- 
+
                             <td className="projectrows_action-cell">
                                 <button className="projectrows_action-btn" onClick={(e) => {
                                     e.stopPropagation();
-                                    navigate(`/lead/member/${member.name}`)
+                                    navigate(`/lead/member/${encodeURIComponent(member.name)}`, { state: { member } });
+
                                 }} style={{ display: "flex", alignItems: "center", gap: "4px", color: "#9333ea", fontSize: "13px", fontWeight: "600" }}>
                                     <Eye size={16} /> View
                                 </button>
                             </td>
- 
+
                         </tr>
                     ))}
                 </tbody>
@@ -126,5 +131,5 @@ const TeamTable = ({ members, searchQuery }) => {
         </div>
     );
 };
- 
+
 export default TeamTable;

@@ -12,7 +12,8 @@ import TeamLoading from "./TeamLoading";
  
 import "../../../stylesheet/podActualHours.css";
  
-const ProjectLeadActualHours = () => {
+const ProjectLeadActualHours = ({ selectedMember }) => {
+
     const [viewMode, setViewMode] = useState("project"); // 'project' or 'team'
     const [searchQuery, setSearchQuery] = useState("");
     const [projectOverviewData, setProjectOverviewData] = useState({});
