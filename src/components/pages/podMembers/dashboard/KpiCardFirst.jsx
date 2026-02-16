@@ -1,4 +1,4 @@
-import "../../../stylesheet/kpiCard.css";
+import "../../../stylesheet/kpiCardFirst.css";
 
 function KpiCard({ title, value, subtext, icon }) {
   return (

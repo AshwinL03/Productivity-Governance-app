@@ -1,8 +1,7 @@
 import React from "react";
-import "./overview.css";
-import KpiCard from "./KpiCard";
+import KpiCard from "./KpiCardSec";
 import ActivityChart from "./ActivityChart";
-
+import "../../../stylesheet/overviewSec.css"
 
 const Overview = () => {
   return (

@@ -1,7 +1,7 @@
 import { Clock, TrendingUp } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-import KpiCard from "./KpiCard";
-import OverviewCard from "./OverviewCard";
+import KpiCard from "./KpiCardFirst";
+import OverviewCardFirst from "./OverviewCardFirst";
 import RecentActivity from "./RecentActivity";
 import "../../../stylesheet/home.css";
 
@@ -43,7 +43,7 @@ function Home() {
       </div>
 
       {/* Overview */}
-      <OverviewCard />
+      <OverviewCardFirst/>
 
       {/* Recent Activity */}
       <RecentActivity />

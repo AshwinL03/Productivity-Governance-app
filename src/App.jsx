@@ -19,7 +19,7 @@ import MemberLayout from "./components/layout/MemberLayout";
    LEAD Pages
 ========================= */
 import LeadLayout from "./components/layout/LeadLayout";
-import Overview from "./components/pages/podLeads/LeadOverview/Overview";
+import Overview from "./components/pages/podLeads/leadOverview/OverviewCardSec";
 import ProjectLeadActualHours from "./components/pages/podLeads/actualHoursLead/ProjectLeadActualHours";
 import EachProject from "./components/pages/podLeads/project/EachProject";
 import AddProject from "./components/pages/podLeads/addProject/AddProject";

@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import "./memberDetail.css";
+import "../../../stylesheet/memberDetail.css";
 
 import MemberHeader from "./MemberHeader";
 import MemberMetrics from "./MemberMetrics";
