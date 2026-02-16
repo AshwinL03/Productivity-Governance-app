@@ -1,13 +1,7 @@
-import { useParams } from "react-router-dom";
- 
+import MemberDetail from "./MemberDetail";
+
 const EachMember = () => {
-    const { id } = useParams();
-    return (
-        <div style={{ padding: "20px" }}>
-            <h1>Member Name: {id}</h1>
-            <p>Details for member {id} will appear here.</p>
-        </div>
-    );
+  return <MemberDetail />;
 };
- 
+
 export default EachMember;
