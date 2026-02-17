@@ -1,0 +1,435 @@
+/* src/stylesheet/adminMembers.css */
+
+.admin-members-container {
+  padding: 24px;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Header Styles */
+.members-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.members-title {
+  font-size: 28px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0 0 8px 0;
+}
+
+.members-subtitle {
+  font-size: 14px;
+  color: #6b7280;
+  margin: 0;
+}
+
+.add-member-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background: #7c3aed;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.add-member-btn:hover {
+  background: #6d28d9;
+}
+
+/* Search and Filter Wrapper */
+.search-filter-wrapper {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+  width: 100%;
+}
+
+.search-box {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 0 16px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.search-box:focus-within {
+  border-color: #7c3aed;
+  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.1);
+}
+
+.search-icon {
+  color: #9ca3af;
+  flex-shrink: 0;
+}
+
+.search-input {
+  width: 100%;
+  padding: 12px 16px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  background: transparent;
+}
+
+.search-input::placeholder {
+  color: #9ca3af;
+}
+
+/* Filter Dropdown */
+.filter-dropdown {
+  display: flex;
+  align-items: center;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 0 16px;
+  min-width: 200px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.filter-dropdown:focus-within {
+  border-color: #7c3aed;
+  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.1);
+}
+
+.filter-icon {
+  color: #9ca3af;
+  flex-shrink: 0;
+}
+
+.filter-select {
+  width: 100%;
+  padding: 12px 16px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  background: transparent;
+  color: #1f2937;
+  cursor: pointer;
+}
+
+.filter-select option {
+  color: #1f2937;
+}
+
+/* Table Wrapper */
+.table-wrapper {
+  background: white;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  margin-bottom: 16px;
+  overflow: auto;
+  width: 100%;
+}
+
+/* Table Styles */
+.members-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  table-layout: auto;
+}
+
+/* Table Header */
+.members-table thead tr {
+  background: #f9fafb;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.members-table th {
+  padding: 16px 12px;
+  text-align: left;
+  font-size: 12px;
+  font-weight: 600;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Column Widths */
+.members-table th:nth-child(1) { width: 16%; } /* Name */
+.members-table th:nth-child(2) { width: 22%; } /* Email */
+.members-table th:nth-child(3) { width: 14%; } /* Role */
+.members-table th:nth-child(4) { width: 12%; } /* Utilization */
+.members-table th:nth-child(5) { width: 12%; } /* Status */
+.members-table th:nth-child(6) { width: 16%; } /* Actions */
+
+/* Row borders */
+.members-table tbody tr {
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.members-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+/* Row hover effect */
+.members-table tbody tr:hover {
+  background: #f9fafb;
+  transition: background 0.2s ease;
+}
+
+/* Table Cell Styles */
+.members-table td {
+  padding: 16px 12px;
+  color: #1f2937;
+  vertical-align: middle;
+}
+
+/* Name Cell - Simplified */
+.member-name {
+  font-weight: 500;
+  color: #111827;
+  white-space: nowrap;
+}
+
+/* Email Cell */
+.member-email-cell {
+  color: #6b7280;
+  white-space: nowrap;
+}
+
+/* Role Badge */
+.role-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.role-admin {
+  background: #f3e8ff;
+  color: #6b21a8;
+
+}
+
+.role-lead {
+  background: #e0e7ff;
+  color: #1e40af;
+}
+
+.role-member {
+  background: #f9f9f9;
+  color: #a3a9a9c1;
+}
+
+/* Utilization Cell - Reduced size */
+.utilization-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.utilization-value {
+  font-size: 13px;  /* Reduced from default */
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.utilization-optimal {
+  color: #10b981;
+}
+
+.utilization-high {
+  color: #ef4444;
+}
+
+.utilization-low {
+  color: #f59e0b;
+}
+
+.utilization-warning {
+  color: #ef4444;
+}
+
+/* Status Badge */
+.status-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.status-active {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.status-deactivated {
+  background: #f3f4f6;
+  color: #6b7280;
+}
+
+/* Action Icons */
+.member-actions-cell {
+  text-align: left;
+}
+
+.action-icons {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.action-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  border: none;
+  background: transparent;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #6b7280;
+  transition: all 0.2s ease;
+}
+
+.action-btn:hover {
+  background: #f3f4f6;
+}
+
+.view-btn:hover {
+  color: #3b82f6;
+}
+
+.edit-btn:hover {
+  color: #7c3aed;
+}
+
+.delete-btn:hover {
+  color: #ef4444;
+  background: #fee2e2;
+}
+
+/* No Results */
+.no-results {
+  text-align: center;
+  padding: 48px 24px !important;
+  color: #6b7280;
+  font-size: 14px;
+  white-space: normal !important;
+}
+
+/* Members Summary */
+.members-summary {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 13px;
+  color: #6b7280;
+  padding: 8px 0;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 1024px) {
+  .admin-members-container {
+    padding: 20px;
+  }
+  
+  .members-table {
+    font-size: 13px;
+  }
+  
+  .members-table th,
+  .members-table td {
+    padding: 14px 10px;
+  }
+  
+  .members-table th:nth-child(1) { width: 18%; }
+  .members-table th:nth-child(2) { width: 20%; }
+  .members-table th:nth-child(3) { width: 14%; }
+  .members-table th:nth-child(4) { width: 12%; }
+  .members-table th:nth-child(5) { width: 12%; }
+  .members-table th:nth-child(6) { width: 24%; }
+  
+  .search-filter-wrapper {
+    flex-direction: column;
+  }
+  
+  .filter-dropdown {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .admin-members-container {
+    padding: 16px;
+  }
+
+  .members-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .add-member-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .members-table {
+    font-size: 12px;
+  }
+  
+  .members-table th,
+  .members-table td {
+    padding: 12px 8px;
+  }
+  
+  .members-table th:nth-child(1) { width: 16%; }
+  .members-table th:nth-child(2) { width: 18%; }
+  .members-table th:nth-child(3) { width: 14%; }
+  .members-table th:nth-child(4) { width: 12%; }
+  .members-table th:nth-child(5) { width: 12%; }
+  .members-table th:nth-child(6) { width: 28%; }
+  
+  .action-icons {
+    gap: 12px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .admin-members-container {
+    padding: 12px;
+  }
+  
+  .members-title {
+    font-size: 24px;
+  }
+  
+  .member-name {
+    white-space: normal;
+  }
+  
+  .status-badge,
+  .role-badge {
+    padding: 3px 8px;
+    font-size: 11px;
+  }
+  
+  .utilization-value {
+    font-size: 12px;  /* Even smaller on mobile */
+  }
+  
+  .action-icons {
+    gap: 8px;
+  }
+}

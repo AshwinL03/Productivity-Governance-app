@@ -1,0 +1,288 @@
+/* src/stylesheet/addMember.css */
+
+.add-member-container {
+  padding: 24px;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Back Button */
+.back-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 0;
+  background: none;
+  border: none;
+  color: #6b7280;
+  font-size: 14px;
+  cursor: pointer;
+  transition: color 0.2s ease;
+  margin-bottom: 24px;
+}
+
+.back-button:hover {
+  color: #7c3aed;
+}
+
+/* Header */
+.add-member-header {
+  margin-bottom: 32px;
+}
+
+.add-member-title {
+  font-size: 28px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0 0 8px 0;
+}
+
+.add-member-subtitle {
+  font-size: 14px;
+  color: #6b7280;
+  margin: 0;
+}
+
+/* Cards */
+.details-card,
+.security-card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 32px;
+  margin-bottom: 24px;
+}
+
+.card-heading {
+  font-size: 18px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0 0 24px 0;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* Form Groups */
+.form-group {
+  margin-bottom: 24px;
+}
+
+.form-group:last-child {
+  margin-bottom: 0;
+}
+
+.form-group label {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 6px;
+}
+
+.required-field::after {
+  content: " *";
+  color: #ef4444;
+}
+
+/* Form Inputs - Full Width */
+.form-input,
+.form-select {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #1f2937;
+  background: white;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Grey theme for role dropdown */
+.form-select.grey-theme {
+  background-color: #f9fafb;
+}
+
+/* Dropdown styling */
+.form-select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  background-size: 16px;
+  padding-right: 48px;
+}
+
+.form-input:hover,
+.form-select:hover {
+  border-color: #9ca3af;
+}
+
+.form-input:focus,
+.form-select:focus {
+  outline: none;
+  border-color: #7c3aed;
+  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.1);
+}
+
+.form-input::placeholder {
+  color: #9ca3af;
+}
+
+/* Field Hint Text */
+.field-hint {
+  font-size: 12px;
+  color: #9ca3af;
+  margin-top: 6px;
+  font-style: italic;
+}
+
+.password-hint {
+  color: #6b7280;
+  font-style: normal;
+}
+
+/* POD Lead Field Animation */
+.pod-lead-field {
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* First Login Inner Card */
+.first-login-card {
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 16px;
+}
+
+.first-login-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.first-login-icon {
+  color: #1e40af;
+}
+
+.first-login-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1e40af;
+}
+
+.first-login-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.info-icon {
+  color: #3b82f6;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.first-login-message {
+  font-size: 13px;
+  color: #1e3a8a;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Action Buttons */
+.add-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.cancel-btn {
+  padding: 12px 24px;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #6b7280;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.cancel-btn:hover {
+  background: #f3f4f6;
+  border-color: #d1d5db;
+  color: #374151;
+}
+
+.create-btn {
+  padding: 12px 24px;
+  background: #7c3aed;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: white;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.create-btn:hover {
+  background: #6d28d9;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .add-member-container {
+    padding: 16px;
+  }
+
+  .add-member-title {
+    font-size: 24px;
+  }
+
+  .details-card,
+  .security-card {
+    padding: 24px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .add-member-title {
+    font-size: 22px;
+  }
+
+  .details-card,
+  .security-card {
+    padding: 20px;
+  }
+
+  .add-actions {
+    flex-direction: column-reverse;
+  }
+
+  .cancel-btn,
+  .create-btn {
+    width: 100%;
+    padding: 12px 20px;
+  }
+
+  .first-login-content {
+    flex-direction: column;
+    gap: 8px;
+  }
+}

@@ -8,7 +8,17 @@ import Alerts from "./components/pages/podMembers/alerts/Alerts";
 
 //Admin
 import AdminLayout from "./components/layout/AdminLayout";
-import AdminHome from "./components/pages/admin/adminDashboard/adminHome";
+import AdminHome from "./components/pages/admin/adminDashboard/AdminHome";
+import AdminProjects from "./components/pages/admin/adminProjects/AdminProjects";
+import ViewProject from "./components/pages/admin/adminProjects/ViewProject";
+import EditProject from "./components/pages/admin/adminProjects/EditProject";
+import AddProject from "./components/pages/admin/adminProjects/AddProject";
+import AdminMembers from "./components/pages/admin/adminMembers/AdminMembers";
+import ViewMember from "./components/pages/admin/adminMembers/ViewMember";
+import EditMember from "./components/pages/admin/adminMembers/EditMember";
+import AddMember from "./components/pages/admin/adminMembers/AddMember";
+import AdminAlerts from "./components/pages/admin/adminAlerts/AdminAlerts";
+
 
 function App() {
   return (
@@ -30,9 +40,15 @@ function App() {
 
         <Route path="/admin" element={<AdminLayout />}>
           <Route index element={<AdminHome />} />
-          <Route path="projects" element={<div>Admin Projects (Coming Soon)</div>} />
-          <Route path="members" element={<div>Admin Members (Coming Soon)</div>} />
-          <Route path="alerts" element={<div>Admin Alerts (Coming Soon)</div>} />
+          <Route path="projects" element={<AdminProjects />} />
+          <Route path="projects/view/:projectId" element={<ViewProject />} />
+          <Route path="projects/edit/:projectId" element={<EditProject />} />
+          <Route path="projects/add" element={<AddProject />} /> 
+          <Route path="members" element={<AdminMembers />} />
+          <Route path="members/view/:memberId" element={<ViewMember />} /> 
+          <Route path="members/edit/:memberId" element={<EditMember />} />  
+          <Route path="members/add" element={<AddMember />} />
+          <Route path="alerts" element={<AdminAlerts />} />
         </Route>
 
       </Routes>
