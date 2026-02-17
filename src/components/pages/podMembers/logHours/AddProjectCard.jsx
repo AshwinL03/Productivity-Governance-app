@@ -13,16 +13,16 @@ function AddProjectCard({ onClose, onAddProject }) {
   };
 
   return (
-    <div className="add-project-card">
+    <div className="log-add-project-card">
 
-      <div className="add-pro-header">
+      <div className="log-add-pro-header">
         <h3>Assign Project to My Timeline</h3>
         <button className="close-btn" onClick={onClose}>
           <X size={16} />
         </button>
       </div>
 
-      <div className="form-group">
+      <div className="log-form-group">
         <label>Project</label>
         <select
           value={selectedProject}
@@ -35,20 +35,20 @@ function AddProjectCard({ onClose, onAddProject }) {
         </select>
       </div>
 
-      <div className="date-row">
-        <div className="form-group">
+      <div className="log-date-row">
+        <div className="log-form-group">
           <label>Start Date</label>
-          <div className="date-input">
+          <div className="log-date-input">
             <CalendarDays size={14} />
-            <input type="text" placeholder="Pick a date" />
+            <input type="date" placeholder="Pick a date" />
           </div>
         </div>
 
-        <div className="form-group">
+        <div className="log-form-group">
           <label>End Date</label>
-          <div className="date-input">
+          <div className="log-date-input">
             <CalendarDays size={14} />
-            <input type="text" placeholder="Pick a date" />
+            <input type="date" placeholder="Pick a date" />
           </div>
         </div>
       </div>
@@ -58,10 +58,10 @@ function AddProjectCard({ onClose, onAddProject }) {
       </p>
 
       <div className="form-actions">
-        <button className="primary-btn" onClick={handleAdd}>
+        <button className="log-primary-btn" onClick={handleAdd}>
           Add to Timeline
         </button>
-        <button className="secondary-btn" onClick={onClose}>
+        <button className="log-secondary-btn" onClick={onClose}>
           Cancel
         </button>
       </div>

@@ -22,14 +22,25 @@ import LeadLayout from "./components/layout/LeadLayout";
 import Overview from "./components/pages/podLeads/leadOverview/OverviewCardSec";
 import ProjectLeadActualHours from "./components/pages/podLeads/actualHoursLead/ProjectLeadActualHours";
 import EachProject from "./components/pages/podLeads/project/EachProject";
-import AddProject from "./components/pages/podLeads/addProject/AddProject";
+import AddProjectFirst from "./components/pages/podLeads/addProject/AddProjectFirst";
 import EachMember from "./components/pages/podLeads/member/EachMember";
  
 /* =========================
    Admin Pages
 ========================= */
+//Admin
 import AdminLayout from "./components/layout/AdminLayout";
-import AdminHome from "./components/pages/admin/adminDashboard/adminHome";
+import AdminHome from "./components/pages/admin/adminDashboard/AdminHome";
+import AdminProjects from "./components/pages/admin/adminProjects/AdminProjects";
+import ViewProject from "./components/pages/admin/adminProjects/ViewProject";
+import EditProject from "./components/pages/admin/adminProjects/EditProject";
+import AddProjectSecond from "./components/pages/admin/adminProjects/AddProjectSecond";
+import AdminMembers from "./components/pages/admin/adminMembers/AdminMembers";
+import ViewMember from "./components/pages/admin/adminMembers/ViewMember";
+import EditMember from "./components/pages/admin/adminMembers/EditMember";
+import AddMember from "./components/pages/admin/adminMembers/AddMember";
+import AdminAlerts from "./components/pages/admin/adminAlerts/AdminAlerts";;
+
  
 function App() {
   return (
@@ -55,17 +66,22 @@ function App() {
           <Route path="alerts" element={<div>Lead Alerts (Coming Soon)</div>} />
           <Route path="project/:id" element={<EachProject />} />
           <Route path="member/:id" element={<EachMember />} />
-          <Route path="addprojects" element={<AddProject />} />
+          <Route path="addprojects" element={<AddProjectFirst />} />
         </Route>
  
         {/* ================= ADMIN ================= */}
-        <Route path="/admin" element={<AdminLayout />}>
+         <Route path="/admin" element={<AdminLayout />}>
           <Route index element={<AdminHome />} />
-          <Route path="projects" element={<div>Admin Projects (Coming Soon)</div>} />
-          <Route path="members" element={<div>Admin Members (Coming Soon)</div>} />
-          <Route path="alerts" element={<div>Admin Alerts (Coming Soon)</div>} />
+          <Route path="projects" element={<AdminProjects />} />
+          <Route path="projects/view/:projectId" element={<ViewProject />} />
+          <Route path="projects/edit/:projectId" element={<EditProject />} />
+          <Route path="projects/add" element={<AddProjectSecond />} />
+          <Route path="members" element={<AdminMembers />} />
+          <Route path="members/view/:memberId" element={<ViewMember />} />
+          <Route path="members/edit/:memberId" element={<EditMember />} />  
+          <Route path="members/add" element={<AddMember />} />
+          <Route path="alerts" element={<AdminAlerts />} />
         </Route>
- 
       </Routes>
     </BrowserRouter>
   );

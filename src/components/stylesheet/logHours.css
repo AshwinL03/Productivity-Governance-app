@@ -127,7 +127,7 @@
 }
 
 /* ADD PROJECT CARD */
-.add-project-card {
+.log-add-project-card {
   background: #f9fafb;
   border: 1px solid #e5e7eb;
   border-radius: 12px;
@@ -147,14 +147,14 @@
   }
 }
 
-.add-pro-header {
+.log-add-pro-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 16px;
 }
 
-.add-pro-header h3 {
+.log-add-pro-header h3 {
   font-size: 16px;
   font-weight: 600;
 }
@@ -171,36 +171,36 @@
 }
 
 /* FORM */
-.form-group {
+.log-form-group {
   display: flex;
   flex-direction: column;
   margin-bottom: 14px;
 }
 
-.form-group label {
+.log-form-group label {
   font-size: 12px;
   color: #6b7280;
   margin-bottom: 4px;
 }
 
-.form-group select,
-.form-group input {
+.log-form-group select,
+.log-form-group input {
   padding: 8px 10px;
   border-radius: 8px;
   border: 1px solid #e5e7eb;
   font-size: 13px;
 }
 
-.date-row {
+.log-date-row {
   display: flex;
   gap: 16px;
 }
 
-.date-row .form-group {
+.log-date-row .log-form-group {
   flex: 1;   /* Makes both equal width */
 }
 
-.date-input {
+.log-date-input {
   display: flex;
   align-items: center;
   gap: 6px;
@@ -209,7 +209,7 @@
   border-radius: 8px;
 }
 
-.date-input input {
+.log-date-input input {
   border: none;
   outline: none;
   width: 100%;
@@ -234,7 +234,7 @@
   gap: 10px;
 }
 
-.primary-btn {
+.log-primary-btn {
   background: #7c3aed;
   color: white;
   padding: 8px 14px;
@@ -244,11 +244,11 @@
   font-size: 13px;
 }
 
-.primary-btn:hover {
+.log-primary-btn:hover {
   background: #6d28d9;
 }
 
-.secondary-btn {
+.log-secondary-btn {
   background: #f3f4f6;
   border: none;
   padding: 8px 14px;
@@ -257,7 +257,7 @@
   cursor: pointer;
 }
 
-.secondary-btn:hover {
+.log-secondary-btn:hover {
   background: #e5e7eb;
 }
 
@@ -397,6 +397,7 @@
 .nonproject-action .secondary-btn:hover {
   background: #f3f4f6;
   border-color: #d1d5db;
+  cursor: pointer;
 }
 
 
@@ -471,3 +472,4 @@
   font-size: 12px;
   margin-top: 24px;
 }
+

@@ -3,54 +3,112 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import "../../../stylesheet/datePicker.css";
 
 function DateRangePicker({ onClose, onApply }) {
+  // Month names
+  const monthNames = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
+
+  // Current calendar month
+  const [currentDate, setCurrentDate] = useState(new Date(2026, 1));
+
+  // Selected day
   const [selectedDay, setSelectedDay] = useState(1);
+
+  // Selected range
   const [range, setRange] = useState("Feb 1 – Feb 7, 2026");
 
+  // Days in current month
+  const daysInMonth = new Date(
+    currentDate.getFullYear(),
+    currentDate.getMonth() + 1,
+    0,
+  ).getDate();
+
+  // Helper function to update range
+  const updateRange = (date, day) => {
+    const month = monthNames[date.getMonth()];
+
+    const year = date.getFullYear();
+
+    setRange(`${month} ${day} – ${month} ${day + 6}, ${year}`);
+  };
+
+  // Change month
+  const changeMonth = (direction) => {
+    const newDate = new Date(currentDate);
+
+    newDate.setMonth(currentDate.getMonth() + direction);
+
+    setCurrentDate(newDate);
+
+    const day = 1;
+
+    setSelectedDay(day);
+
+    updateRange(newDate, day);
+  };
+
+  // Day click
   const handleDayClick = (day) => {
     setSelectedDay(day);
-    setRange(`Feb ${day} – Feb ${day + 6}, 2026`);
+
+    updateRange(currentDate, day);
   };
 
   return (
-    <div className="date-picker">
-      {/* Quick Presets */}
-      <div className="date-section">
-        <p className="section-title">Quick Presets</p>
-        <div className="preset-row">
-          <button>This Week</button>
-          <button>Last 7 Days</button>
-          <button>This Month</button>
-        </div>
-      </div>
+    <div className="ofdr-container">
+      {/* Calendar Section */}
 
-      {/* Calendar */}
-      <div className="date-section">
-        <p className="section-title">Select start date</p>
+      <div className="ofdr-section">
+        <p className="ofdr-section-title">Select start date</p>
 
-        <div className="calendar">
-          <div className="calendar-header">
-            <button className="nav-btn">
+        <div className="ofdr-calendar">
+          {/* Header */}
+
+          <div className="ofdr-calendar-header">
+            <button className="ofdr-nav-btn" onClick={() => changeMonth(-1)}>
               <ChevronLeft size={14} />
             </button>
-            <span>February 2026</span>
-            <button className="nav-btn">
+
+            <span className="ofdr-calendar-title">
+              {currentDate.toLocaleString("default", {
+                month: "long",
+                year: "numeric",
+              })}
+            </span>
+
+            <button className="ofdr-nav-btn" onClick={() => changeMonth(1)}>
               <ChevronRight size={14} />
             </button>
           </div>
 
-          <div className="calendar-grid">
+          {/* Calendar Grid */}
+
+          <div className="ofdr-calendar-grid">
             {["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"].map((d) => (
-              <span key={d} className="day-label">
+              <span key={d} className="ofdr-day-label">
                 {d}
               </span>
             ))}
 
-            {Array.from({ length: 28 }).map((_, i) => {
+            {Array.from({ length: daysInMonth }).map((_, i) => {
               const day = i + 1;
+
               return (
                 <span
                   key={day}
-                  className={`day ${
+                  className={`ofdr-day ${
                     selectedDay === day ? "selected" : ""
                   }`}
                   onClick={() => handleDayClick(day)}
@@ -64,25 +122,25 @@ function DateRangePicker({ onClose, onApply }) {
       </div>
 
       {/* Selected Range */}
-      <div className="date-section selected-range-box">
-        <p className="selected-label">Selected Range</p>
-        <p className="selected-value">{range}</p>
-        <p className="helper-text">
-          Select a date range to update your overview.
-        </p>
+
+      <div className="ofdr-selected-range-box">
+        <p className="ofdr-selected-label">Selected Range</p>
+
+        <p className="ofdr-selected-value">{range}</p>
       </div>
 
       {/* Actions */}
-      <div className="date-actions">
-        <button className="apply-btn" onClick={() => onApply(range)}>
+
+      <div className="ofdr-actions">
+        <button className="ofdr-apply-btn" onClick={() => onApply(range)}>
           Apply
         </button>
-        <button className="cancel-btn" onClick={onClose}>
+
+        <button className="ofdr-cancel-btn" onClick={onClose}>
           Cancel
         </button>
       </div>
     </div>
   );
 }
-
 export default DateRangePicker;

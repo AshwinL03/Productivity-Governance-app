@@ -10,14 +10,14 @@ function OverviewCard() {
   const [dateRange, setDateRange] = useState("Feb 1 – Feb 7, 2026");
 
   return (
-    <div className="card overview-card">
-      <div className="card-header">
+    <div className="card-overview-card">
+      <div className="dash-card-header">
         <div>
           <h3>Overview</h3>
           <p>Total project hours this week</p>
         </div>
 
-        <button className="date-btn" onClick={() => setShowPicker(true)}>
+        <button className="dash-date-btn" onClick={() => setShowPicker(true)}>
           <CalendarDays size={14} />
           <span>{dateRange}</span>
         </button>

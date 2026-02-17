@@ -15,11 +15,11 @@ const Overview = () => {
         </div>
 
         <div className="header-right">
-          <select className="filter-select">
+          <select className="overview-filter-select">
             <option>Monthly</option>
           </select>
 
-          <button className="export-btn">Export Report</button>
+          <button className="overview-export-btn">Export Report</button>
         </div>
       </div>
 

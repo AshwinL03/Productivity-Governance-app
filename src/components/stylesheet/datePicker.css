@@ -1,147 +1,191 @@
-.date-picker {
+.ofdr-container {
   width: 280px;
   background: #ffffff;
   border-radius: 12px;
   padding: 16px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-  font-family: inherit;
 }
 
-.date-section {
+.ofdr-section {
   margin-bottom: 14px;
 }
 
-.section-title {
+.ofdr-section-title {
   font-size: 12px;
   color: #6b7280;
   margin-bottom: 6px;
 }
 
 /* Presets */
-.preset-row {
+
+.ofdr-preset-row {
   display: flex;
   gap: 6px;
 }
 
-.preset-row button {
+.ofdr-preset-btn {
   flex: 1;
   font-size: 12px;
+
   padding: 6px;
+
   border-radius: 6px;
+
   border: 1px solid #e5e7eb;
+
   background: #f9fafb;
+
   cursor: pointer;
-  transition: all 0.2s ease;
 }
 
-.preset-row button:hover {
+.ofdr-preset-btn:hover {
   background: #ede9fe;
+
   border-color: #c4b5fd;
+
   color: #7c3aed;
 }
 
 /* Calendar */
-.calendar {
+
+.ofdr-calendar {
   margin-top: 6px;
 }
 
-.calendar-header {
+.ofdr-calendar-header {
   display: flex;
-  align-items: center;
+
   justify-content: space-between;
-  font-size: 13px;
+
+  align-items: center;
+
   margin-bottom: 8px;
 }
 
-.nav-btn {
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: #6b7280;
+.ofdr-calendar-title {
+  font-size: 13px;
 }
 
-.calendar-grid {
+.ofdr-nav-btn {
+  background: none;
+
+  border: none;
+
+  cursor: pointer;
+}
+
+.ofdr-calendar-grid {
   display: grid;
+
   grid-template-columns: repeat(7, 1fr);
+
   gap: 4px;
+
   text-align: center;
 }
 
-.day-label {
+.ofdr-day-label {
   font-size: 11px;
+
   color: #9ca3af;
 }
 
-/* Days */
-.day {
+.ofdr-day {
   padding: 6px;
+
   font-size: 12px;
+
   border-radius: 6px;
+
   cursor: pointer;
-  transition: background 0.2s ease;
 }
 
-.day:hover {
+.ofdr-day:hover {
   background: #ede9fe;
 }
 
-.day.selected {
+.ofdr-day.selected {
   background: #7c3aed;
-  color: #ffffff;
-  font-weight: 500;
+
+  color: white;
 }
 
 /* Selected Range */
-.selected-range-box {
+
+.ofdr-selected-range-box {
   background: #f5f3ff;
+
   padding: 10px;
+
   border-radius: 8px;
 }
 
-.selected-label {
+.ofdr-selected-label {
   font-size: 11px;
+
   color: #6b7280;
-  margin: 0;
 }
 
-.selected-value {
+.ofdr-selected-value {
   font-size: 13px;
+
   font-weight: 500;
+
   color: #7c3aed;
-  margin: 2px 0;
 }
 
-.helper-text {
+.ofdr-helper-text {
   font-size: 11px;
+
   color: #9ca3af;
-  margin: 0;
 }
 
 /* Actions */
-.date-actions {
+
+.ofdr-actions {
   display: flex;
+
   justify-content: space-between;
+
   margin-top: 12px;
 }
 
-.apply-btn {
+.ofdr-apply-btn {
   background: #7c3aed;
-  color: #ffffff;
+
+  color: white;
+
   border: none;
+
   padding: 6px 14px;
+
   border-radius: 8px;
+
   cursor: pointer;
-  font-size: 13px;
 }
 
-.apply-btn:hover {
+.ofdr-apply-btn:hover {
   background: #6d28d9;
 }
 
-.cancel-btn {
-  background: none;
-  border: none;
-  color: #6b7280;
+.ofdr-cancel-btn {
+  background: #f9fafb; /* light gray background */
+  border: 1px solid #e5e7eb; /* border */
+  border-radius: 10px;
+  padding: 8px 18px;
+  color: #374151;
+  font-size: 14px;
   cursor: pointer;
-  font-size: 13px;
+  transition: all 0.2s ease;
+}
+
+/* Hover */
+.ofdr-cancel-btn:hover {
+  background: #f3f4f6;
+  border-color: #d1d5db;
+}
+
+/* Click effect */
+.ofdr-cancel-btn:active {
+  background: #e5e7eb;
 }
