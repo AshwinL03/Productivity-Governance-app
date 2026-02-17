@@ -1,0 +1,352 @@
+.each_project_summary_container {
+    padding: 0;
+    font-family: 'DM Sans', sans-serif;
+    color: #333;
+}
+ 
+.each_project_summary_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+ 
+.each_project_summary_title {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0;
+}
+ 
+.each_project_summary_subtitle {
+    font-size: 14px;
+    color: #666;
+    margin: 5px 0 0;
+}
+ 
+.each_project_summary_mode_toggle {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+ 
+.each_project_summary_btn {
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+}
+ 
+.each_project_summary_btn_active {
+    background-color: #8B5CF6;
+    /* Purple */
+    color: white;
+}
+ 
+.each_project_summary_btn_inactive {
+    background-color: #F3F4F6;
+    color: #666;
+}
+ 
+.each_project_summary_export_btn {
+    background-color: #A855F7;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+}
+ 
+/* Summary Card */
+.each_project_summary_card {
+    background: white;
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 24px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border: 1px solid #E5E7EB;
+}
+ 
+.each_project_summary_info_grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 20px;
+}
+ 
+.each_project_summary_label {
+    font-size: 11px;
+    text-transform: uppercase;
+    color: #9CA3AF;
+    font-weight: 600;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+}
+ 
+.each_project_summary_value {
+    font-size: 16px;
+    font-weight: 600;
+    color: #111827;
+}
+ 
+.each_project_summary_status_active {
+    color: #10B981;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+ 
+.each_project_summary_status_dot {
+    width: 8px;
+    height: 8px;
+    background-color: #10B981;
+    border-radius: 50%;
+    display: inline-block;
+}
+ 
+.each_project_summary_total_hours {
+    color: #8B5CF6;
+    font-size: 20px;
+}
+ 
+/* Metrics Grid */
+.each_project_summary_metrics_grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-bottom: 24px;
+}
+ 
+.each_project_summary_metric_card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    border: 1px solid #E5E7EB;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+ 
+.each_project_summary_metric_icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+ 
+.each_project_summary_metric_title {
+    font-size: 13px;
+    color: #6B7280;
+    margin-bottom: 8px;
+}
+ 
+.each_project_summary_metric_value {
+    font-size: 24px;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 8px;
+}
+ 
+.each_project_summary_metric_trend {
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+ 
+.each_project_summary_trend_up {
+    color: #10B981;
+}
+ 
+.each_project_summary_trend_down {
+    color: #EF4444;
+}
+ 
+/* Details and Employees Split */
+.each_project_summary_split_layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 24px;
+}
+ 
+.each_project_summary_details_card,
+.each_project_summary_employees_card {
+    background: white;
+    border-radius: 12px;
+    padding: 24px;
+    border: 1px solid #E5E7EB;
+}
+ 
+.each_project_summary_section_title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    color: #111827;
+}
+ 
+.each_project_summary_detail_group {
+    margin-bottom: 20px;
+}
+ 
+.each_project_summary_detail_text {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #4B5563;
+}
+ 
+.each_project_summary_badge {
+    background-color: #F3E8FF;
+    color: #9333EA;
+    padding: 4px 12px;
+    border-radius: 16px;
+    font-size: 12px;
+    font-weight: 600;
+    display: inline-block;
+}
+ 
+/* Employee List */
+.each_project_summary_employee_item {
+    display: flex;
+    align-items: center;
+    padding: 16px 0;
+    border-bottom: 1px solid #F3F4F6;
+}
+ 
+.each_project_summary_employee_item:last-child {
+    border-bottom: none;
+}
+ 
+.each_project_summary_employee_info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+ 
+.each_project_summary_avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #8B5CF6;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 14px;
+}
+ 
+.each_project_summary_employee_name {
+    font-weight: 600;
+    font-size: 14px;
+    color: #111827;
+}
+ 
+.each_project_summary_employee_role {
+    font-size: 12px;
+    color: #6B7280;
+}
+ 
+.each_project_summary_employee_stats {
+    text-align: right;
+    margin-left: auto;
+    margin-right: 16px;
+}
+ 
+.each_project_summary_employee_hours {
+    font-weight: 600;
+    font-size: 14px;
+    color: #111827;
+}
+ 
+.each_project_summary_employee_contribution {
+    font-size: 11px;
+    color: #6B7280;
+}
+ 
+.each_project_summary_employee_score {
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+}
+ 
+.each_project_summary_score_high {
+    background-color: #FFEDD5;
+    color: #C2410C;
+}
+ 
+.each_project_summary_score_med {
+    background-color: #D1FAE5;
+    color: #047857;
+}
+ 
+.each_project_summary_score_low {
+    background-color: #FEE2E2;
+    color: #B91C1C;
+}
+ 
+.each_project_summary_last_update {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    color: #9CA3AF;
+    margin-top: 24px;
+}
+ 
+/* Charts and Insights */
+.each_project_summary_chart_layout {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 24px;
+    margin-bottom: 24px;
+}
+ 
+.each_project_summary_chart_card,
+.each_project_summary_insights_card {
+    background: white;
+    border-radius: 12px;
+    padding: 24px;
+    border: 1px solid #E5E7EB;
+}
+ 
+.each_project_summary_insights_list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+ 
+.each_project_summary_insight_item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+ 
+.each_project_summary_insight_content {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+ 
+.each_project_summary_insight_icon {
+    margin-top: 2px;
+}
+ 
+.each_project_summary_insight_title {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+ 
+.each_project_summary_insight_desc {
+    font-size: 12px;
+    color: #6B7280;
+    line-height: 1.4;
+}
+ 
