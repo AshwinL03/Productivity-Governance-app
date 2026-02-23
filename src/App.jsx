@@ -30,7 +30,7 @@ import EachMember from "./components/pages/podLeads/member/EachMember";
 ========================= */
 //Admin
 import AdminLayout from "./components/layout/AdminLayout";
-import AdminHome from "./components/pages/admin/adminDashboard/AdminHome";
+import AdminHome from "./components/pages/admin/adminDashboard/HomeAdmin";
 import AdminProjects from "./components/pages/admin/adminProjects/AdminProjects";
 import ViewProject from "./components/pages/admin/adminProjects/ViewProject";
 import EditProject from "./components/pages/admin/adminProjects/EditProject";
