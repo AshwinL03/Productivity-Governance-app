@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Activity, Clock, TrendingUp, AlertCircle } from "lucide-react";
-import "../../../stylesheet/eachProject.css";
+import "../../../stylesheet/eachProjects.css";
 
 // Subcomponents
 import ProjectHeader from "./ProjectHeader";
