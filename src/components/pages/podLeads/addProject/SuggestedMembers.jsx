@@ -1,4 +1,3 @@
-// SuggestedMembers.jsx
 import { UserCheck, Lightbulb, CheckCircle } from 'lucide-react';
 
 function SuggestedMembers() {

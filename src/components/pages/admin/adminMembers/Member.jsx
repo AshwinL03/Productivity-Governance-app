@@ -1,7 +1,6 @@
 // src/components/pages/admin/adminMembers/Member.jsx
 import { Eye, Edit2, Trash2, AlertTriangle } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-//import "../../../stylesheet/member.css";
 
 function Member({ member, onDelete }) {
   const navigate = useNavigate();

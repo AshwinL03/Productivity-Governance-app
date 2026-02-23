@@ -84,16 +84,6 @@ function ProjectView() {
     }
   };
 
-  const getMilestoneStatusIcon = (status) => {
-    return <Calendar size={16} className="milestone-icon" />;
-  };
-
-  const getUtilizationColor = (utilization) => {
-    if (utilization > 100) return "utilization-high";
-    if (utilization < 75) return "utilization-low";
-    return "utilization-optimal";
-  };
-
   const getUtilizationClass = (utilization) => {
     if (utilization > 100) return "utilization-red";
     if (utilization < 75) return "utilization-grey";

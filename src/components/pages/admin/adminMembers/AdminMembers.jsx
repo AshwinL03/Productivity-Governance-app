@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Plus, Search, Filter } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import Member from "./Member";
-import "../../../stylesheet/adminmembers.css";
+import "../../../stylesheet/adminMember.css";
 
 function AdminMembers() {
   const navigate = useNavigate();
