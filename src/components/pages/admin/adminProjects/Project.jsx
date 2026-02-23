@@ -1,6 +1,6 @@
 import { Eye, Edit2, Trash2 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-import "../../../stylesheet/project.css";
+import "../../../stylesheet/projects.css";
 
 function Project({ project, onView, onDelete }) {
   const navigate = useNavigate();
