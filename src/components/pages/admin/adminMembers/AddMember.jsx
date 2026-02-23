@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { ArrowLeft, Shield, Info } from "lucide-react";
-import "../../../stylesheet/addMember.css";
+import "../../../stylesheet/addMembers.css";
 
 function AddMember() {
   const navigate = useNavigate();
