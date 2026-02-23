@@ -1,5 +1,5 @@
 import React from "react";
-import "../../../stylesheet/KpiCardSec.css";
+import "../../../stylesheet/KpiCardSecond.css";
 
 
 const KpiCard = ({ title, value, subtitle, icon, iconColor }) => {
